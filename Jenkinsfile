@@ -2,11 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/shivanisaurabh/Orchestration.git'
-            }
-        }
 
         stage('Build Backend Image') {
             steps {
