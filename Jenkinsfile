@@ -21,7 +21,11 @@ pipeline {
 
         stage('Deploy to Kubernetes') {
             steps {
-                sh 'kubectl apply -f k8s/'
+               sh '''
+        pwd
+        ls -R
+        kubectl apply -f ./k8s/
+        '''
             }
         }
     }
